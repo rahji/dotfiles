@@ -1,4 +1,11 @@
-# Helix Configuration Files
+# My Helix Configuration
+
+## Installing Configuration Files
+
+```bash
+cd ~/.config/helix
+git clone https://github.com/rahji/helix-config .
+```
 
 ## Installing Language Servers
 
