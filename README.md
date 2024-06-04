@@ -5,7 +5,12 @@
 ```bash
 cd ~/.config/helix
 git clone https://github.com/rahji/helix-config .
+rm README.md
 ```
+
+## Getting Themes to Work in WSL
+
+Add `export COLORTERM=truecolor` to the bottom of `~/.bashrc`, then run `source ~/.bashrc` to reload the file.
 
 ## Installing Language Servers
 
