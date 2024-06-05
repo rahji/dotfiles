@@ -3,7 +3,6 @@ theme = "catppuccin_macchiato"
 [editor]
 bufferline = "multiple"
 true-color = true
-rulers = [120]
 line-number = "relative"
 
 [editor.statusline]
