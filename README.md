@@ -5,7 +5,6 @@
 ```bash
 cd ~/.config/helix
 git clone https://github.com/rahji/helix-config .
-rm README.md
 ```
 
 ## Getting Themes to Work in WSL
@@ -17,10 +16,10 @@ Add `export COLORTERM=truecolor` to the bottom of `~/.bashrc`, then run `source 
 1. Check to see what is needed for the languages you intend to use: `hx --health`
 2. Look at https://github.com/helix-editor/helix/wiki/Language-Server-Configurations to see how to install what's missing
 
-When I'm using WSL, I will need to do the following:
+When I'm using WSL, I will need to do the following to get my preferred languages set up:
 
-1. Before installing go stuff, make sure that `$HOME/go/bin` is in the PATH
-2. For markdown, install marksman from here: https://github.com/artempyanykh/marksman/releases
+1. Before installing Go stuff, make sure that `$HOME/go/bin` is in the PATH
+2. For markdown, install [marksman](https://github.com/artempyanykh/marksman/releases) and [ltex-ls](https://github.com/valentjn/ltex-ls/releases/tag/16.0.0) (for spelling and grammar checking)
 3. Install each of the following language servers...
 
 ```bash
