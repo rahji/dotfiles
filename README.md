@@ -28,7 +28,7 @@ Helix is ready to go once it's installed, but you do have to install the languag
 1. Check to see what is needed for the languages you intend to use: `hx --health`
 2. Look at https://github.com/helix-editor/helix/wiki/Language-Server-Configurations to see how to install what's missing
 
-When I'm using WSL, I will need to do the following to get my preferred languages set up:
+For me, using WSL to mainly edit Markdown and Go and Javascript, that means:
 
 1. Before installing Go stuff, make sure that `$HOME/go/bin` is in the PATH
 2. For markdown, install [marksman](https://github.com/artempyanykh/marksman/releases) and [ltex-ls](https://github.com/valentjn/ltex-ls/releases/tag/16.0.0) (for spelling and grammar checking)
