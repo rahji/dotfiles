@@ -8,7 +8,7 @@ just to get some sane, comfortable defaults for [helix](https://helix-editor.com
 ```bash
 cd && git clone https://github.com/rahji/dotfiles .
 ```
-tmux should be installed, but you will want to install helix (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL)
+tmux should already be installed, but you will want to install helix (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL)
 
 ## Getting True Color Themes to Work in WSL
 
@@ -22,6 +22,8 @@ I really don't mind the tmux defaults, but I do want it to look nicer.
 2. Run tmux and press `prefix` (ctrl+b by default) + `I` (capital letter i) to install the all plugins listed in `~./tmux.conf` (which is just the catppuccin plugin at the moment)
 
 ## Installing Helix Language Servers
+
+Helix is ready to go once it's installed, but you do have to install the language servers for the kinds of files you typically edit. It's still pretty simple and you only have to do it once. This is the main reason why I'm using this instead of neovim - I just want to edit some files and not spend my life dealing with config/plugins.
 
 1. Check to see what is needed for the languages you intend to use: `hx --health`
 2. Look at https://github.com/helix-editor/helix/wiki/Language-Server-Configurations to see how to install what's missing
