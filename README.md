@@ -5,10 +5,11 @@ just to get some sane, comfortable defaults for [helix](https://helix-editor.com
 
 ## Installation
 
-```bash
-cd && git clone https://github.com/rahji/dotfiles .
-```
-tmux should already be installed, but you will want to install helix (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL)
+1. Back up any of the files that might get overwritten below
+2. Get the files by cloning the repo: `git clone https://github.com/rahji/dotfiles`
+3. Move `.config/helix` and `.tmux.conf` to your home directory
+
+tmux should already be installed, but you will want to install helix (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL) or by using [snap](https://snapcraft.io/install/helix/raspbian) if you're on a raspberry pi.
 
 ## Getting True Color Themes to Work in WSL
 
@@ -19,7 +20,7 @@ Add `export COLORTERM=truecolor` to the bottom of `~/.bashrc`, then run `source 
 I really don't mind the tmux defaults, but I do want it to look nicer.
 
 1. Install [tmux-plugins](https://github.com/tmux-plugins/tpm) by typing `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-2. Run tmux and press `prefix` (ctrl+b by default) + `I` (capital letter i) to install the all plugins listed in `~./tmux.conf` (which is just the catppuccin plugin at the moment)
+2. Run tmux and press `prefix` (ctrl+b by default) + `I` (capital letter i) to install the all plugins listed in `~/.tmux.conf` (which is just the catppuccin plugin at the moment)
 
 ## Installing Helix Language Servers
 
