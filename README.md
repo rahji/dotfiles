@@ -1,7 +1,7 @@
 # My Dot Files
 
 These are the really minimal dot files that I am using at the moment on WSL2. It's basically
-just to get some sane, comfortable defaults for [helix](https://helix-editor.com/) and [tmux](https://github.com/tmux/tmux/wiki). I also set a matching theme (catppuccin mochiatto) for helix, tmux, and bat (although I don't know why they all look different atm). 🙄
+just to get some sane, comfortable defaults for [helix](https://helix-editor.com/) and [tmux](https://github.com/tmux/tmux/wiki). I also set a (mostly) matching theme (catppuccin mochiatto) for helix, tmux, and bat.
 
 ## Installation
 
