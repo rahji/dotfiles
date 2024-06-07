@@ -4,7 +4,8 @@ theme = "catppuccin_macchiato"
 bufferline = "multiple"
 true-color = true
 line-number = "relative"
-
+insert-final-newline = false
+   
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
 right = ["diagnostics", "selections", "register", "position", "position-percentage", "file-encoding", "file-line-ending"]
