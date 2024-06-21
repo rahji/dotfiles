@@ -3,5 +3,6 @@
     "clipboard": "terminal",
     "diff": true,
     "diffgutter": true,
+    "tabstospaces": true,
     "statusformatr": "$(status.branch) | $(status.hash) | $(status.size)"
 }
