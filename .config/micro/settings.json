@@ -1,6 +1,7 @@
 {
     "colorscheme": "catppuccin-macchiato",
-	"clipboard": "terminal",
-	"diff": true,
-	"diffgutter": true
+    "clipboard": "terminal",
+    "diff": true,
+    "diffgutter": true,
+    "statusformatr": "$(status.branch) | $(status.hash) | $(status.size)"
 }
