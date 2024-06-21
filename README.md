@@ -28,6 +28,14 @@ I really don't mind the tmux defaults, but I do want it to look nicer.
 1. Install [tmux-plugins](https://github.com/tmux-plugins/tpm) by typing `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 2. Run tmux and press `prefix` (ctrl+b by default) + `I` (capital letter i) to install the all plugins listed in `~/.tmux.conf` (which is just the catppuccin plugin at the moment)
 
+## Installing Catppuccin Theme for Bat
+
+Note that `bat` may be installed as `batcat` on linux, in which case you should probably make a shorter alias. In any case, you'll need to run the following command to get `bat` to recognize the added themes:
+
+```bash
+bat cache --build
+```
+
 ## Installing Helix Language Servers
 
 Helix is ready to go once it's installed, but you do have to install the language servers for the kinds of files you typically edit. It's still pretty simple and you only have to do it once. This is the main reason why I'm using this instead of neovim - I just want to edit some files and not spend my life dealing with config/plugins.
