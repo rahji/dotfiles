@@ -1,3 +1,6 @@
 {
-    "colorscheme": "catppuccin-macchiato"
+    "colorscheme": "catppuccin-macchiato",
+	"clipboard": "terminal",
+	"diff": true,
+	"diffgutter": true
 }
