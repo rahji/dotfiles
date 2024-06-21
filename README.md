@@ -1,19 +1,25 @@
 # My Dot Files
 
-These are the really minimal dot files that I am using at the moment on WSL2. It's basically
-just to get some sane, comfortable defaults for [helix](https://helix-editor.com/) and [tmux](https://github.com/tmux/tmux/wiki). I also set a (mostly) matching theme (catppuccin mochiatto) for helix, tmux, and bat.
+These are the really minimal dot files that I am using at the moment on WSL2 to configure
+[helix](https://helix-editor.com/) and [tmux](https://github.com/tmux/tmux/wiki). I also 
+set a (mostly) matching theme (catppuccin mochiatto) for helix, tmux, micro, and bat.
 
 ## Installation
 
 1. Back up any of the files that might get overwritten below
 2. Get the files by cloning the repo: `git clone https://github.com/rahji/dotfiles`
-3. Move `.config/helix` and `.tmux.conf` to your home directory
+3. Move `.tmux.conf` and the contents of `.config` to your home directory
 
 tmux should already be installed, but you will want to install helix (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL) or by using [snap](https://snapcraft.io/install/helix/raspbian) if you're on a raspberry pi.
 
 ## Getting True Color Themes to Work in WSL
 
-Add `export COLORTERM=truecolor` to the bottom of `~/.bashrc`, then run `source ~/.bashrc` to reload the file.
+Add the following to the bottom of `~/.bashrc`, then run `source ~/.bashrc` to reload the file.
+
+```bash
+export COLORTERM=truecolor
+export "MICRO_TRUECOLOR=1"
+```
 
 ## Installing Catppuccin Theme for Tmux
 
