@@ -59,3 +59,11 @@ npm i -g yaml-language-server@next                    # YAML
 npm i -g bash-language-server                         # bash
 npm install -g dockerfile-language-server-nodejs      # docker files
 ```
+
+## Notes For Windows Command Prompt
+
+Some of the above config works when using helix and micro in Windows (ie: without WSL2). The micro configuration should not be used since I think the status line configuration causes the editor to move really slowly. The colorschemes folder can be used for Windows, however. It will require that the following environment variable is set though. You'll need to use the "Edit system environment variables" control panel if you want the setting to stick.
+
+```bash
+set MICRO_TRUECOLOR=1
+```
