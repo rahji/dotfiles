@@ -60,6 +60,14 @@ npm i -g bash-language-server                         # bash
 npm install -g dockerfile-language-server-nodejs      # docker files
 ```
 
+### Fixing Issue with Slow Startup
+
+In WSL2, Helix seems to have clipboard-related trouble that causes startup to take longer than it should. Install the following to resolve the issue:
+
+```bash
+sudo apt install wl-clipboard
+```
+
 ## Notes For Windows Command Prompt
 
 Some of the above config works when using helix and micro in Windows (ie: without WSL2). The micro configuration should not be used since I think the status line configuration causes the editor to move really slowly. The colorschemes folder can be used for Windows, however. It will require that the following environment variable is set though. You'll need to use the "Edit system environment variables" control panel if you want the setting to stick.
