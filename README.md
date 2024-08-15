@@ -53,6 +53,7 @@ For me, using WSL to mainly edit Markdown and Go and Javascript, that means:
 go install golang.org/x/tools/gopls@latest            # Go LSP
 go install github.com/go-delve/delve/cmd/dlv@latest   # Go Debugger
 go install golang.org/x/tools/cmd/goimports@latest    # Go Formatter
+go install github.com/nametake/golangci-lint-langserver@latest
 npm i -g vscode-langservers-extracted                 # HTML, JSON, et al
 npm install -g typescript typescript-language-server  # javascript
 npm i -g yaml-language-server@next                    # YAML
