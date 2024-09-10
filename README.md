@@ -1,6 +1,6 @@
 # My Dot Files
 
-These are the really minimal dot files that I am using at the moment on WSL2 to configure
+These are the really minimal dot files and config that I am using at the moment on WSL2 to set up 
 [helix](https://helix-editor.com/) and [tmux](https://github.com/tmux/tmux/wiki). I also 
 set a (mostly) matching theme (catppuccin mochiatto) for helix, tmux, micro, and bat.
 
@@ -36,7 +36,7 @@ Note that `bat` may be installed as `batcat` on linux, in which case you should 
 bat cache --build
 ```
 
-## Installing Helix Language Servers
+## Configuring Helix
 
 Helix is ready to go once it's installed, but you do have to install the language servers for the kinds of files you typically edit. It's still pretty simple and you only have to do it once. This is the main reason why I'm using this instead of neovim - I just want to edit some files and not spend my life dealing with config/plugins.
 
@@ -61,13 +61,44 @@ npm i -g bash-language-server                         # bash
 npm install -g dockerfile-language-server-nodejs      # docker files
 ```
 
-### Fixing Issue with Slow Startup
+### Setting Up dprint
 
-In WSL2, Helix seems to have clipboard-related trouble that causes startup to take longer than it should. Install the following to resolve the issue:
+`dprint` is a file formatter, ala `prettier`. Download it by running this command:
+
+```bash
+curl -fsSL https://dprint.dev/install.sh | sh
+```
+
+`dprint` doesn't work without a `dprint.json` config file in the local directory. There's no such thing as a global config file, strangely. This works for me, when working with Markdown:
+
+```json
+{
+  "markdown": {
+    "lineWidth":120,
+    "emphasisKind":"asterisks",
+
+  },
+  "excludes": [],
+  "plugins": [
+    "https://plugins.dprint.dev/markdown-0.16.1.wasm"
+  ]
+}
+```
+
+Other possible options are in the [dprint Markdown Configuration page](https://dprint.dev/plugins/markdown/config/)
+
+The `languages.toml` file in this repo is already set up to use `dprint` as its formatter. It's configured to format every time you save, but you can also format by typing `:format` or `:fmt`. Most of this `dprint` config info came from <https://medium.com/@CaffeineForCode/helix-setup-for-markdown-b29d9891a812>.
+
+### Fixing Helix Issue with Slow Startup
+
+In WSL2, Helix seems to have clipboard-related trouble that causes startup to take longer than it should. Install the following to (hopefully) resolve the issue:
 
 ```bash
 sudo apt install wl-clipboard
 ```
+
+> [!NOTE]  
+> It's generally not recommended to edit files in Windows directories using WSL2. Everything seems slower/clunkier. It's better to just stick with the linux filesystem - especially since it even shows up in the Windows File Explorer. (Of course I still edit in Windows directories because a lot of my documents are in Dropbox. Then I have the problem of trying to work with files at the command line that haven't been downloaded locally, which causes them to appear as zero-byte files. What a mess. Someday I'll just go back to Linux without Windows. 🤷🏽‍♂️)
 
 ## Notes For Windows Command Prompt
 
