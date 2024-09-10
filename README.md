@@ -76,7 +76,7 @@ curl -fsSL https://dprint.dev/install.sh | sh
   "markdown": {
     "lineWidth":120,
     "emphasisKind":"asterisks",
-
+    "unorderedListKind":"asterisks",
   },
   "excludes": [],
   "plugins": [
