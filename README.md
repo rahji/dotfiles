@@ -21,6 +21,8 @@ export COLORTERM=truecolor
 export "MICRO_TRUECOLOR=1"
 ```
 
+Also related to appearances in WSL, if you want ligatures make sure you're using **JetBrainsMono** and not **JetBrainsMonoNL**. Or some other font that allows ligatures (since this is how they happen, not via some editor configuration).
+
 ## Installing Catppuccin Theme for Tmux
 
 I really don't mind the tmux defaults, but I do want it to look nicer.
