@@ -16,18 +16,34 @@ tmux should already be installed, but you will want to install helix
 (probably by using the [AppImage](https://docs.helix-editor.com/install.html#appimage) if you're using WSL)
 or by using [snap](https://snapcraft.io/install/helix/raspbian) if you're on a raspberry pi.
 
-## Getting True Color Themes to Work in WSL
-
-Add the following to the bottom of `~/.bashrc`, then run `source ~/.bashrc` to reload the file.
+To get bash ready for [oh-my-posh](https://ohmyposh.dev),
+install [ble.sh](https://github.com/akinomyoga/ble.sh). One reason to install this is so oh-my-posh will be able
+to show transient prompts. It also has some other handy features like tab-completions at the prompt.
+Use the [quick instructions](https://github.com/akinomyoga/ble.sh#quick-instructions)
+(minus the part about adding to `~/.bashrc` since the files in this repo already do that). Here is the summary:
 
 ```bash
-export COLORTERM=truecolor
-export "MICRO_TRUECOLOR=1"
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=~/.local
 ```
 
-Also related to appearances in WSL, if you want ligatures make sure you're using **JetBrainsMono** and not
-**JetBrainsMonoNL**. Or some other font that allows ligatures
-(since this is how they happen, not via some editor configuration).
+Once that's installed, install [oh-my-posh](https://ohmyposh.dev/) using the
+[manual installation instructions](https://ohmyposh.dev/docs/installation/linux).
+
+## Adding Bash Config
+
+Add the following to the bottom of `~/.bashrc`:
+
+```bash
+if [ -f "$HOME/.bash_exports" ]; then
+    source "$HOME/.bash_exports"
+fi
+```
+
+## Fonts
+
+Install a nerd font.
+I like ligatures, so I use **JetBrainsMono** and *not* **JetBrainsMonoNL**. 
 
 ## Installing Catppuccin Theme for Tmux
 

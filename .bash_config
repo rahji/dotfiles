@@ -1,0 +1,40 @@
+export COLORTERM=truecolor
+export "MICRO_TRUECOLOR=1"
+
+export VISUAL=hx
+export EDITOR="$VISUAL"
+export HELIX_RUNTIME="/usr/lib/helix/runtime"
+
+source ~/.local/share/blesh/ble.sh
+bleopt prompt_eol_mark='↩'
+
+bleopt complete_menu_complete=
+bleopt complete_menu_filter=
+#bleopt complete_menu_complete=auto
+#bleopt complete_auto_delay=100
+#ble-face auto_complete=fg=250
+
+# Configure ble.sh colors to match oh-my-posh palette
+ble-face -s auto_complete fg=8AADF4
+ble-face -s filename_directory fg=F5BDE6
+#ble-face -s filename_regular fg=B7BDF8
+ble-face -s filename_executable fg=8AADF4
+
+# Configure other file types
+ble-face -s filename_link fg=B7BDF8
+ble-face -s filename_socket fg=F5BDE6
+ble-face -s filename_pipe fg=8AADF4
+ble-face -s filename_setuid fg=F5BDE6,bold
+ble-face -s filename_setgid fg=B7BDF8,bold
+ble-face -s filename_orphan fg=ACB0BE,bg=red
+ble-face -s filename_other fg=ACB0BE
+
+# Configure completion menu colors
+#ble-face -s menu_filter_fixed fg=8AADF4
+#ble-face -s menu_filter_input fg=B7BDF8
+#ble-face -s menu_title fg=B7BDF8
+#ble-face -s menu_selected_item fg=black,bg=8AADF4
+
+#set -o vi
+
+eval "$(~/bin/oh-my-posh init bash --config $HOME/.config/ohmyposh/myconfig.json)"
