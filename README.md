@@ -35,8 +35,8 @@ Once that's installed, install [oh-my-posh](https://ohmyposh.dev/) using the
 Add the following to the bottom of `~/.bashrc`:
 
 ```bash
-if [ -f "$HOME/.bash_exports" ]; then
-    source "$HOME/.bash_exports"
+if [ -f "$HOME/.bash_config" ]; then
+    source "$HOME/.bash_config"
 fi
 ```
 

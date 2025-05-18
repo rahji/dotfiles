@@ -1,6 +1,0 @@
-
-export COLORTERM=truecolor
-export VISUAL=hx
-export EDITOR="$VISUAL"
-export HELIX_RUNTIME="/usr/lib/helix/runtime"
-
