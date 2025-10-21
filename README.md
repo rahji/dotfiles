@@ -91,6 +91,9 @@ npm i -g bash-language-server                         # bash
 npm install -g dockerfile-language-server-nodejs      # docker files
 ```
 
+Since we're installing Go-related stuff, it's a good time to install `golangci-lint`, as well. 
+The instructions are here: <https://golangci-lint.run/docs/welcome/install/#binaries>
+
 ### Setting Up dprint
 
 `dprint` is a file formatter, ala `prettier`. Download it by running this command:
