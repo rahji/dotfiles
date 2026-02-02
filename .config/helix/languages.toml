@@ -26,6 +26,10 @@ name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
+# fix for helix problem with breaking change in golangci-lint: https://github.com/helix-editor/helix/pull/13204
+[language-server.golangci-lint-lsp.config]
+command = ["golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false", "--issues-exit-code=1"]
+
 # markdown previewer https://github.com/mhersson/mpls
 [language-server.mpls]
 command = "mpls"
