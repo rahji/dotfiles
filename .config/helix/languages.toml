@@ -14,6 +14,11 @@ name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 
 [[language]]
+name = "typst"
+auto-format = true
+formatter.command = "typstyle"
+
+[[language]]
 name = "json"
 formatter = { command = 'prettier', args = ["--parser", "json"] }
 
